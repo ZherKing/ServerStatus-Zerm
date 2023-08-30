@@ -1,4 +1,6 @@
 # ServerStatus-Zerm
+还在测试 先别用 有时间慢慢改改看
+
 云探针、多服务器探针、云监控、多服务器云监控
 
 基于 ServerStatus-Toyo 最新版本稍作修改。

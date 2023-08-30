@@ -59,6 +59,9 @@ def get_load():
 def get_cpu():
     return psutil.cpu_percent(interval=INTERVAL)
 
+def get_temperatures():
+    return psutil.sensors_temperatures(fahrenheit=False)
+
 
 class Network:
     def __init__(self):

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Update by: https://github.com/CokeMine/ServerStatus-Hotaru
+# Update by: https://github.com/ZherKing/ServerStatus-Zerm
 # 依赖于psutil跨平台库：
 # 支持Python版本：2.6 to 3.7
 # 支持操作系统： Linux, Windows, OSX, Sun Solaris, FreeBSD, OpenBSD and NetBSD, both 32-bit and 64-bit architectures

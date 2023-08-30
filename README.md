@@ -1,8 +1,11 @@
-# ServerStatus-Hotaru
+# ServerStatus-Zerm
 云探针、多服务器探针、云监控、多服务器云监控
 
 基于 ServerStatus-Toyo 最新版本稍作修改。
 
+由基于 ServerStatus-Hotaru 上添加温度监控
+
+主要监测独立主机的温度
 ## 特性
 
 服务端客户端脚本支持系统：Centos 7、Debian 8、Ubuntu 15.10 及以上、ArchLinux
@@ -41,7 +44,6 @@ ServerStatus-Hotaru 将会停留在轻量级的 ServerStatus，不会再添加�
 
 7、等等
 
-欢迎使用 NodeStatus: https://github.com/cokemine/nodestatus
 
 本项目仍会继续维护
 
@@ -156,6 +158,7 @@ Pirate flag: `pirate`
 
 ## 相关开源项目 ： 
 * ServerStatus-Toyo：https://github.com/ToyoDAdoubiBackup/ServerStatus-Toyo MIT License
+* ServerStatus-Hotaru：https://github.com/cokemine/ServerStatus-Hotaru MIT License
 * ServerStatus：https://github.com/BotoX/ServerStatus WTFPL License
 * mojeda's ServerStatus: https://github.com/mojeda/ServerStatus WTFPL License -> GNU GPLv3 License (ServerStatus is a full rewrite of mojeda's ServerStatus script and not affected by GPL)
 * BlueVM's project: http://www.lowendtalk.com/discussion/comment/169690#Comment_169690 WTFPL License

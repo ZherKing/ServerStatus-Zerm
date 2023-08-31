@@ -74,6 +74,10 @@ def get_cpu():
     total, idle = get_cpu_time()
     return round(100 - float(idle - old_idle) / (total - old_total) * 100.00, 1)
 
+def get_temperatures():
+    temperatures = get_cpu_temperatures()
+    return float(temperatures)
+
 
 def get_traffic_vnstat():
     vnstat = os.popen('vnstat --oneline b').readline()

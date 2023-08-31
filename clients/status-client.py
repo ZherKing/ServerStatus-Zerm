@@ -74,9 +74,21 @@ def get_cpu():
     total, idle = get_cpu_time()
     return round(100 - float(idle - old_idle) / (total - old_total) * 100.00, 1)
 
-def get_temperatures():
-    temperatures = get_cpu_temperatures()
-    return float(temperatures)
+def get_cpu_temperature():
+    try:
+        output = subprocess.check_output(['sensors'], universal_newlines=True)
+        lines = output.split('\n')
+        temperature = None
+
+        for line in lines:
+            if line.startswith('Core 0:') or line.startswith('Package id 0:'):
+                temperature = line.split(':')[1].strip().split()[0]
+                break
+
+        return temperature
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
 
 
 def get_traffic_vnstat():
@@ -176,6 +188,7 @@ if __name__ == '__main__':
             traffic = Network()
             while True:
                 CPU = get_cpu()
+                CPU_Temperature = get_cpu_temperature()
                 NetRx, NetTx = traffic.get_speed()
                 NET_IN, NET_OUT = traffic.get_traffic()
                 Uptime = get_uptime()
@@ -203,6 +216,7 @@ if __name__ == '__main__':
                 array['network_tx'] = NetTx
                 array['network_in'] = NET_IN
                 array['network_out'] = NET_OUT
+                array['cpu_temperature'] = CPU_Temperature
                 s.send(("update " + json.dumps(array) + '\n').encode('utf-8'))
         except KeyboardInterrupt:
             raise
